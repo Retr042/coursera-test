@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Contenedor principal de menú */
+        .menu {
+            display: flex;
+            flex-wrap: wrap; /* Para hacer los recuadros responsivos */
+            gap: 20px;
+            justify-content: center;
+            width: 90%;
+        }
+
+        /* Estilo de los recuadros de menú (más anchos que largos) */
+        .menu-item {
+            background-color: #e0e0e0;
+            border: 4px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            color: #333;
+            line-height: 1.5;
+            width: 100%;
+            max-width: 500px; /* Mayor ancho para los recuadros */
+            min-height: 150px; /* Altura mínima */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Asegura que el contenido se ajuste al top */
+        }
+
+        /* Estilo de los recuadros de título dentro de cada recuadro */
+        .menu-item .title-box {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            border-top-right-radius: 5px;
+        }
+
+        /* Estilo de los recuadros de texto */
+        .menu-item p {
+            background-color: #959393;
+            border: none; /* Quitar borde interno */
+            color: #fff;
+            text-align: right;
+            padding: 20px;
+            margin: 0;
+            font-family: Helvetica;
+            flex-grow: 1; /* Hace que el contenido crezca y ajuste el tamaño del recuadro */
+            overflow: hidden; /* Evita que el texto se desborde */
+            word-wrap: break-word; /* Permite que el texto largo se divida correctamente */
+        }
+
+        /* Media Queries para hacer el diseño responsive */
+
+        /* Dispositivos grandes (pantallas de escritorio) */
+        @media (min-width: 1200px) {
+            .menu-item {
+                width: 30%; /* 3 recuadros por fila */
+            }
+        }
+
+        /* Dispositivos medianos (tabletas y pantallas más pequeñas) */
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .menu-item {
+                width: 45%; /* 2 recuadros por fila */
+            }
+            /* Para hacer el tercer recuadro más grande */
+            .menu-item:nth-child(3) {
+                width: 100%; /* Tercer recuadro ocupa el ancho de los dos recuadros superiores */
+            }
+        }
+
+        /* Dispositivos pequeños (teléfonos) */
+        @media (max-width: 949px) {
+            .menu-item {
+                width: 130%; /* Un recuadro por fila */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="menu">
+        <div class="menu-item">
+            <div class="title-box">Chiken</div>
+            <p>Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions.</p>
+        </div>
+        <div class="menu-item">
+            <div class="title-box">Beef</div>
+            <p>Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions.</p>
+        </div>
+        <div class="menu-item">
+            <div class="title-box">Sushi</div>
+            <p>Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions.</p>
+        </div>
+    </div>
+</body>
+</html>
